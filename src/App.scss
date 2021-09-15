@@ -1,21 +1,10 @@
 .App {
-  text-align: center;
-  display: flex;
-  margin-top: 25px;
-  justify-content: space-between;
-  padding-right: 25px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: 25px;
 }
 
-.message{
-  font-size: 100px;
-  color:  red;
-}
 
-.textField{
-  width: 500px;
-}
 
-.formControl{
-  align-items: center;
-  display: grid !important;
-}
+
+
