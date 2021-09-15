@@ -1,0 +1,19 @@
+.listItem__link{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #33fd3d #000 #06d722;
+    border-radius: 6px;
+    background: linear-gradient(#2af30f, #3fe316) #27e316;
+    transition: 0.2s;
+    cursor: pointer;
+    width: 40%;
+    text-align: center;
+}
+.listButton{
+    margin-left: 20% !important;
+}
