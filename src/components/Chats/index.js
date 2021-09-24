@@ -10,7 +10,7 @@ import { AUTHORS } from "../../utils/constants";
 import { Form } from "../Form";
 import { ChatList } from "../ChatList";
 import { addChat, deleteChat } from "../../store/chats/actions";
-import { addMessage } from "../../store/messages/actions";
+import {  addMessageWithReplay } from "../../store/messages/actions";
 import { selectChats, selectIfChatExists } from "../../store/chats/selectors";
 import { selectMessages } from "../../store/messages/selectors";
 
@@ -43,23 +43,12 @@ function Chats(props) {
 
   const sendMessage = useCallback(
     (text, author) => {
-      dispatch(addMessage(chatId, text, author));
+      dispatch(addMessageWithReplay(chatId, text, author));
     },
     [chatId]
   );
 
-  useEffect(() => {
-    let timeout;
-    const curMess = messages[chatId];
-
-  if (!!chatId && curMess?.[curMess.length - 1]?.author === AUTHORS.HUMAN) {
-    timeout = setTimeout(() => {
-      sendMessage("I am bot", AUTHORS.bot);
-    }, 3000);
-  }
-
-    return () => clearTimeout(timeout);
-  }, [messages]);
+  
 
   const handleAddMessage = useCallback(
     (text) => {
