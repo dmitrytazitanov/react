@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   },
 });
 export const Profile = () => {
-  const showName = useSelector((state) => state.showName);
+  const showName = useSelector((state) => state.profile.showName);
   const dispatch = useDispatch();
   const classes = useStyles();
   const handleClick = () => {
