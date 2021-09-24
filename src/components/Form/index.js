@@ -32,7 +32,7 @@ export const Form = ({ onSubmit }) => {
         onChange={handleChange}
         inputRef={inputRef}
       />
-        <Button>
+        <Button type="submit">
           <>
             <span>Add message</span>
           </>

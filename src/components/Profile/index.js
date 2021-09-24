@@ -1,9 +1,9 @@
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleShowName } from "../../store/profile/actions";
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import { makeStyles } from '@material-ui/core/styles';
+import { store } from "../../store";
 
 
 const useStyles = makeStyles({
