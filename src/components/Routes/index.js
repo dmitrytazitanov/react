@@ -4,6 +4,7 @@ import { Home } from "../Home";
 import Chats from "../Chats";
 import './styles.css';
 import { Profile } from "../Profile";
+import { News } from "../News";
 
 
 export const Routes = () => {
@@ -16,6 +17,8 @@ export const Routes = () => {
         </Route>
         <Route path="/chats/:chatId?" component={Chats}>
         </Route>
+        <Route path="/news" component={News}>
+        </Route>
         <Route path="/profile" component={Profile}>
         </Route>
         <Route>
@@ -24,7 +27,8 @@ export const Routes = () => {
       </Switch>
       <Link to="/chats">CHATS</Link> <br />
       <Link to="/profile">Profile</Link> <br />
-      <Link to="/">Home</Link>
+      <Link to="/">Home</Link> <br />
+      <Link to="/news">News</Link>
     </BrowserRouter>
   );
 };
