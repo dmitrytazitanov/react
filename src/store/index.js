@@ -5,10 +5,12 @@ import { profileReducer } from "./profile/reducer";
 import thunk from 'redux-thunk';
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import { articlesReducer } from "./articles/reducer";
+
 
 const persistConfig = {
   key: "gb2409",
-  storege,
+  storage,
 };
 
 
@@ -16,6 +18,7 @@ const rootReducer = combineReducers({
   profile: profileReducer,
   chats: chatsReducer,
   messages: messagesReducer,
+  articles: articlesReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
